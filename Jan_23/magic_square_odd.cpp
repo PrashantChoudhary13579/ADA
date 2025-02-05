@@ -1,19 +1,16 @@
 #include<iostream>
 using namespace std;
-int main()
-{
-    int n = 5;
-    int arr[5][5] ={ 0 };
 
-    cout<<"Zero Valued 2D Array"<<endl;
-    for(int i = 0 ;i < 5 ; i++)
-    {
-        for(int j = 0 ; j < 5 ; j++)
-        {
-            cout<<arr[i][j]<<" ";
+void print(int **arr, int n){
+    cout<<"Magic Square "<<endl;
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j<n ;j ++){
+               cout<<arr[i][j]<<"\t"; 
+            }
+            cout<<endl;
         }
-        cout<<endl;
-    }
+}
+void magic_square(int **arr, int n){
     int row = 0;
     int col = n/2;
     int i = 1;
@@ -33,16 +30,45 @@ int main()
         }
         i++;
     }
+    print(arr,n);
+}
 
-    cout<<"Magic Square "<<endl;
-     for(int i = 0 ;i < 5 ; i++)
-    {
-        for(int j = 0 ; j < 5 ; j++)
-        {
-            cout<<arr[i][j]<<" ";
-        }
-        cout<<endl;
+int main()
+{
+    int n;
+    cout<<"Enter the value of n ";
+    cin>>n;
+    int **arr = new int *[n];
+    for(int i = 0 ; i<n; i++){
+        arr[i] = new int [n];
     }
 
+    cout<<"Assigning 0 value to the "<<endl;
+    for(int i = 0 ;i < n ; i++)
+    {
+        for(int j = 0 ; j < n ; j++)
+        {
+            arr[i][j] = 0;
+        }
+    }
+
+    magic_square(arr, n);
 
 }
+/*
+Output -
+
+Enter the value of n 7
+Assigning 0 value to the
+Magic Square
+28      19      10      1       48      39      30
+29      27      18      9       7       47      38
+37      35      26      17      8       6       46
+45      36      34      25      16      14      5
+4       44      42      33      24      15      13
+12      3       43      41      32      23      21
+20      11      2       49      40      31      22
+
+
+
+*/
