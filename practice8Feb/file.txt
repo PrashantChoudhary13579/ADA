@@ -1,0 +1,3 @@
+cd "d:\ADA\practice8Feb\" && g++ filehandling.cpp -o filehandling && "d:\ADA\practice8Feb\"filehandling
+cd "d:\ADA\practice8Feb\" && g++ filehandling.cpp -o filehandling && "d:\ADA\practice8Feb\"filehandling
+cd "d:\ADA\practice8Feb\" && g++ filehandling.cpp -o filehandling && "d:\ADA\practice8Feb\"filehandling
