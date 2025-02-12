@@ -1,0 +1,1 @@
+This is the second file named as index2.txt and in this file we are taking the  second example of the input file .
