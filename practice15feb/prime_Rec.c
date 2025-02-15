@@ -19,6 +19,10 @@
     }
 
 */
+
+// Time complexity - O(n^3/2) == O(n * square_root(n))
+// Space complexity - O(1)
+
 #include<stdio.h>
 #include<stdbool.h>
 #include<math.h>
