@@ -1,0 +1,11 @@
+I was using the graph and learn that we can i can implement it into two ways - 
+
+1. using the class 
+2. using the normal function
+
+Graph can be arranged into two types - 
+1. Adjacency matrix
+2. Adjacency list 
+
+1. In matrix - we use the matrix to show the edges -
+    it might be 
