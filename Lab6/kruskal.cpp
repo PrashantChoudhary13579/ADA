@@ -26,28 +26,29 @@ void heapify(int b[], int i, int n)
 }
 void print(int b[], int n)
 {
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < n; i++)
     {
         cout << b[i] << " ";
     }
 }
-void buildminHeap(int b[])
+void buildminHeap(int b[], int n)
 {
-
-    for (int i = 0; i < 5; i++)
+    // int n = b.size();
+    int t = n;
+    for (int i = 0; i < n; i++)
     {
         cout << b[i] << " ";
     }
-    int n = 5;
+    // int n = 5;
 
-    for (int i = n / 2 - 1; i >= 0; i--)
+    for (int i = t / 2 - 1; i >= 0; i--)
     {
-        heapify(b, i, n);
+        heapify(b, i, t);
     }
 
     cout << endl;
-    cout<<"Heap after heapify "<<endl;
-    print(b, 5);
+    cout << "Heap after heapify " << endl;
+    print(b, n);
     // return b;
 }
 
@@ -64,18 +65,28 @@ void unions(int u, int v, int p[])
 {
     p[u] = v;
 }
-
-void Kruskal(int arr[5][3], int n, int out[5][2])
+void print2d(int arr[][2], int n)
+{
+    for (int i = 0; i < n; i++)
+    {
+        for (int j = 0; j < 2; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
+}
+void Kruskal(int arr[][3], int n, int out[][2])
 {
 
-    int b[5];
-    for (int i = 0; i < 5; i++)
+    int b[n];
+    for (int i = 0; i < n; i++)
     {
         b[i] = arr[i][2];
     }
 
     // int cost[n];
-    buildminHeap(b);
+    buildminHeap(b, n);
 
     int p[n];
     for (int i = 0; i < n; i++)
@@ -91,7 +102,7 @@ void Kruskal(int arr[5][3], int n, int out[5][2])
     int v = -1;
     int i = 0;
 
-    while (i <= n - 1 && j >= 0)
+    while (i < n - 1 && j >= 0)
     {
         // cout<<b[j]<<" "<<b[0];
         // print(b, n);
@@ -109,7 +120,7 @@ void Kruskal(int arr[5][3], int n, int out[5][2])
                 u = arr[s][0];
                 v = arr[s][1];
 
-                cout<<"Edge " << u << "," << v << endl;
+                cout << "Edge " << u << "," << v << endl;
             }
         }
         // cout<<b[j]<<endl;
@@ -118,48 +129,66 @@ void Kruskal(int arr[5][3], int n, int out[5][2])
 
         int a = find(p, n, u);
         int b = find(p, n, v);
-        cout<<"Parents ";
-        cout<<a<<","<<b<<endl;
+        cout << "Parents ";
+        cout << a << "," << b << endl;
         if (a != b)
         {
             i++;
             mincost = mincost + val;
             out[i][0] = u;
             out[i][1] = v;
-            unions(a, b,p);
+            unions(a, b, p);
         }
         // i++;
     }
-    cout<<"Weight of MST "<<mincost<<endl;
-}
-void print2d(int arr[5][2])
-{
-    for (int i = 0; i < 5; i++)
-    {
-        for (int j = 0; j < 2; j++)
-        {
-            cout << arr[i][j] << " ";
-        }
-        cout << endl;
+    cout<< i<<endl;
+    if( i != n-1 ){
+        cout<<"Spanning tree does not exist "<<endl;
     }
+    // else{
+        cout << "Edges which comes in making MST " << endl;
+        print2d(out, n);
+
+        cout << "Weight of MST " << mincost << endl;
+
+    // }
 }
+
 
 int main()
 {
-    int arr[5][3] = {{0, 1, 10}, {1, 3, 15}, {0, 3, 5}, {2, 0, 6}, {2, 3, 4}};
+    // int arr[5][3] = {{0, 1, 10}, {1, 3, 15}, {0, 3, 5}, {2, 0, 6}, {2, 3, 4}};
+    int n=12;
+    // cout << "Enter the value of rows " << endl;
+    // cin >> n;
+    int arr[n][3] = {
+        {0, 1, 50},   
+    {0, 2, 30},   
+    {1, 3, 70},   
+    {1, 4, 40},   
+    {2, 5, 90},   
+    {3, 6, 20},   
+    {4, 7, 80},   
+    {5, 8, 60},   
+    {6, 9, 100},  
+    {7, 10, 10},  
+    {8, 11, 110},  
+    {2, 6, 120}  
+    };
 
-    int n = 5;
-    int out[5][2] = {-1};
-    for (int i = 0; i < 5; i++)
+    // int n = 5;
+    int out[n][2] = {-1};
+    for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < 2; j++)
         {
             out[i][j] = -1;
         }
     }
-    cout<<"Initial output edges "<<endl;
-    print2d(out);
+    cout << "Initial output edges " << endl;
+    print2d(out, n);
     Kruskal(arr, n, out);
-    cout<<"Edges which comes in making MST "<<endl;
-    print2d(out);
+    
+
+    return 0;
 }
