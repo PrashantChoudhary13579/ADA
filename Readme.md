@@ -10,9 +10,9 @@
 - Otherwise, search in the right half (mid+1 to high).
 - Repeat the process until a peak element is found and return the value.
 
-Time Complexity - O(log n)
+    Time Complexity - O(log n)
 
-Space Complexity - O(1)
+    Space Complexity - O(1)
 
 2. Find the peak element in 2 Dimension array.
 
