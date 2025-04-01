@@ -11,6 +11,7 @@
 - Repeat the process until a peak element is found and return the value.
 
 Time Complexity - O(log n)
+
 Space Complexity - O(1)
 
 2. Find the peak element in 2 Dimension array.
