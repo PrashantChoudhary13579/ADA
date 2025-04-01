@@ -37,4 +37,16 @@ Time Complexity - O()
 Time Complexity - O(n^2)
 Space Complexity - O(n^2)
 
-4. F
+4. Finding the square of a number in O(log n) T.C.
+
+Here’s a compact version of the algorithm in 6-7 lines:
+
+1. **Input:** Two integers `a` (base) and `b` (exponent).
+2. **Base Case:** If `b == 0`, return 1.
+3. If `b` is even, compute `power(a, b/2)` and square the result.
+4. If `b` is odd, compute `power(a, b/2)`, square it, and multiply by `a`.
+5. Recursively break down the exponent by halving it until `b == 0`.
+6. **Output:** Return the computed result for `a^b`.
+
+- Time complexity - O(log n)
+- Time complexity - O(log n)
