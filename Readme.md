@@ -10,9 +10,8 @@
 - Otherwise, search in the right half (mid+1 to high).
 - Repeat the process until a peak element is found and return the value.
 
-    Time Complexity - O(log n)
-
-    Space Complexity - O(1)
+Time Complexity - O(log n)
+Space Complexity - O(1)
 
 2. Find the peak element in 2 Dimension array.
 
@@ -25,6 +24,7 @@
 - Repeat until a peak is found or print "no peak found."
 
 Time Complexity - O()
+Space Complexity - O()
 
 3. Magic Square for ODD matrix
 
@@ -39,14 +39,12 @@ Space Complexity - O(n^2)
 
 4. Finding the square of a number in O(log n) T.C.
 
-Here’s a compact version of the algorithm in 6-7 lines:
+- Input: Two integers a (base) and b (exponent).
+- Base Case: If b == 0, return 1.
+- If b is even, compute power(a, b/2) and square the result.
+- If b is odd, compute power(a, b/2), square it, and multiply by a.
+- Recursively break down the exponent by halving it until b == 0.
+- Output: Return the computed result for a^b.
 
-1. **Input:** Two integers `a` (base) and `b` (exponent).
-2. **Base Case:** If `b == 0`, return 1.
-3. If `b` is even, compute `power(a, b/2)` and square the result.
-4. If `b` is odd, compute `power(a, b/2)`, square it, and multiply by `a`.
-5. Recursively break down the exponent by halving it until `b == 0`.
-6. **Output:** Return the computed result for `a^b`.
-
-- Time complexity - O(log n)
-- Time complexity - O(log n)
+- Time complexity - O(log b)
+- Space complexity - O(log b)
