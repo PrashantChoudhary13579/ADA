@@ -1,5 +1,3 @@
-# Analysis and Design Algorithm
-
 ## LAB 1
 
 1. Find the peak element in 1 Dimension array.
