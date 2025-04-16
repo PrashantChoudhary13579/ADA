@@ -2,8 +2,6 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// void swap()
-
 void heapify(int b[], int i, int n)
 {
     int largest = i;
@@ -49,7 +47,7 @@ void buildminHeap(int b[], int n)
     cout << endl;
     cout << "Heap after heapify " << endl;
     print(b, n);
-    // return b;
+    
 }
 
 int find(int p[], int n, int u)
@@ -85,7 +83,6 @@ void Kruskal(int arr[][3], int n, int out[][2])
         b[i] = arr[i][2];
     }
 
-    // int cost[n];
     buildminHeap(b, n);
 
     int p[n];
@@ -104,13 +101,9 @@ void Kruskal(int arr[][3], int n, int out[][2])
 
     while (i < n - 1 && j >= 0)
     {
-        // cout<<b[j]<<" "<<b[0];
-        // print(b, n);
-
         swap(b[j], b[0]);
         cout << endl;
-        // cout<<b[j]<<" "<<b[0];
-        // cout << b[j] << endl;
+
         int val = b[j];
         for (int s = 0; s < n; s++)
         {
@@ -123,7 +116,6 @@ void Kruskal(int arr[][3], int n, int out[][2])
                 cout << "Edge " << u << "," << v << endl;
             }
         }
-        // cout<<b[j]<<endl;
         heapify(b, 0, j);
         j = j - 1;
 
@@ -139,30 +131,21 @@ void Kruskal(int arr[][3], int n, int out[][2])
             out[i][1] = v;
             unions(a, b, p);
         }
-        // i++;
     }
     cout<< i<<endl;
     if( i != n-1 ){
         cout<<"Spanning tree does not exist "<<endl;
     }
-    // else{
         cout << "Edges which comes in making MST " << endl;
         print2d(out, n);
 
         cout << "Weight of MST " << mincost << endl;
-
-    // }
 }
-
-
 int main()
 {
-    // int arr[5][3] = {{0, 1, 10}, {1, 3, 15}, {0, 3, 5}, {2, 0, 6}, {2, 3, 4}};
     int n=12;
-    // cout << "Enter the value of rows " << endl;
-    // cin >> n;
     int arr[n][3] = {
-        {0, 1, 50},   
+    {0, 1, 50},   
     {0, 2, 30},   
     {1, 3, 70},   
     {1, 4, 40},   
@@ -175,8 +158,7 @@ int main()
     {8, 11, 110},  
     {2, 6, 120}  
     };
-
-    // int n = 5;
+    
     int out[n][2] = {-1};
     for (int i = 0; i < n; i++)
     {
