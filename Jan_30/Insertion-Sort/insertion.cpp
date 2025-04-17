@@ -32,14 +32,16 @@ int main()
     {
         printf("Could not open file %s\n", "insertionData.csv");
     }
-    fprintf(fp, "Size , Time(ns)\n");
-
+    fprintf(fp, "Size,Time(ns)\n");
+    
     for (int i = 0; i < 1000; i++)
     {
+        int val = 100000;
         int *a = new int[n];
         for (int j = 0; j < n; j++)
         {
-            a[j] = rand() % m;
+            a[j] = val;
+            val -= 10;
         }
 
         auto start = high_resolution_clock::now();
