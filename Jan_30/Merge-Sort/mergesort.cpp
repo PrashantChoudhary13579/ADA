@@ -56,18 +56,19 @@ int main()
     int n = 10;
     int m = 50;
 
-    FILE *fp = fopen("MergeData.csv", "w");
+    FILE *fp = fopen("worst.csv", "w");
     if (fp == NULL){
-        printf("Could not open file %s\n", "MergeData.csv");
+        printf("Could not open file %s\n", "worst.csv");
     }
     fprintf(fp, "Size,Time (ns)\n");
-    
+    int val = 100000000;
     for (int i = 0; i < 1000; i++)
     {
         int arr[n];
         for (int j = 0; j < n; j++)
         {
-            arr[j] = rand() % m;
+            arr[j] = val;
+            val -= 100;
         }
 
         auto start = high_resolution_clock::now();
