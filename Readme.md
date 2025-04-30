@@ -283,7 +283,8 @@ Space Complexity - O(V + E) // Array size of V + Edge list of E edges
          
 ## LAB 9
 
-1. Given an integer n, the task is to find the solution to the n-queens problem, where n queens are placed on an n*n chessboard such that no two queens can attack each other.
+### Problem 1.
+Given an integer n, the task is to find the solution to the n-queens problem, where n queens are placed on an n*n chessboard such that no two queens can attack each other.
 
 #### Algorithm: 
 1.	Start with column 1 and try placing a queen in each row of that column.
@@ -300,5 +301,5 @@ Enter the value of n
 [2 4 1 3]
 [3 1 4 2]
 #### Time Complexity: O(N!) 
-![alt text](D:\ADA\Lab9\image.png)
+![alt text](Lab9/image.png)
 #### Space Complexity: O(N)
