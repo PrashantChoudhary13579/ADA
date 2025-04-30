@@ -17,14 +17,12 @@ class node{
 void generate_vertices(int** cost, int n){
     for(int i =0;i<n;i++)
         cost[i] = new int[n];
-    
-    
+     
     for(int i=0;i<n;i++){
         for(int j = 0;j<n;j++){
             cost[i][j] = 0;
         }
     }
-
     cout<<"Enter number of edges : ";
     int edges;
     cin>>edges;
@@ -36,7 +34,6 @@ void generate_vertices(int** cost, int n){
         cin>>w;
         cost[i][j] = w;
     }
-
     return;
 }
 
@@ -51,7 +48,7 @@ void dijkstra(int source, int** cost, int n, int* dist, node* path[], int* p) {
     flag[source] = true;
     dist[source] = 0;
     p[source] = 0;
-
+    
     for (int count = 0; count < n - 1; count++) { 
         int u = -1, minDist = INT_MAX;
         for (int i = 0; i < n; i++) { 
@@ -128,5 +125,4 @@ int main(){
 
     delete[] cost;
     delete[] dist;
-
 }

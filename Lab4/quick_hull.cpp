@@ -150,14 +150,16 @@ int main() {
     generate_vertices(vertices, n);
 
     cout << "Generated Points:\n";
+    cout<<"x : ";
     for (int i = 0; i < n; i++) {
         cout << vertices[i].x <<", ";
     }
-    cout<<"\ny\n";
+    cout<<"\ny :";
     for (int i = 0; i < n; i++) {
         cout << vertices[i].y <<", ";
     }
-    cout<<"end";
+    cout<<endl;
+    cout<<"End"<<endl;
 
     int maximum = INT32_MIN;
     int minimum = INT32_MAX;

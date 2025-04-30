@@ -44,16 +44,6 @@ int main(){
     int C = 100;
     int arr[4][30] ={0};
     
-    // arr[0][] -> contains the profit
-    // arr[1][] -> contains the weight
-
-    // int n;
-    // cout
-    // int **arr = new int *[n];
-    // for(int i = 0 ; i<n; i++){
-    //     arr[i] = new int [n];
-    // }
-
     for(int i=1;i<30;i++){
         arr[0][i] = i;
     }

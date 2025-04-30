@@ -170,7 +170,5 @@ int main()
     cout << "Initial output edges " << endl;
     print2d(out, n);
     Kruskal(arr, n, out);
-    
-
     return 0;
 }

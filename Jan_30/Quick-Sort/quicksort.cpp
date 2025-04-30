@@ -49,7 +49,7 @@ int main() {
         
         fprintf(fp, "%d,%lld\n", n, duration.count());
         
-        n = n +100;
+        n = n *5;
         m = m + 100;
     }
     

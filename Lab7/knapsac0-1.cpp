@@ -5,7 +5,6 @@ using namespace std;
 
 int main() {
     srand(static_cast<unsigned>(time(0)));
-
     int capacity = rand() % 10 + 10; 
 
     int** items = new int*[5];
@@ -17,13 +16,11 @@ int main() {
         items[i][0] = rand() % 10 + 1; // weight
         items[i][1] = rand() % 100;    // value
     }
-
     // Displaying the items
     cout << "Item List (Weight, Value):\n";
     for (int i = 0; i < 5; ++i) {
         cout << "Item " << i + 1 << ": (" << items[i][0] << ", " << items[i][1] << ")\n";
     }
-
     cout << "Knapsack Capacity: " << capacity << "\n";
 
     int** dp = new int*[6];
@@ -57,7 +54,6 @@ int main() {
         delete[] items[i];
     }
     delete[] items;
-
     for (int i = 0; i <= 5; ++i) {
         delete[] dp[i];
     }

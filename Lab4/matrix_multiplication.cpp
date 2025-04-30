@@ -63,7 +63,7 @@ int main() {
     cout << "\nRecursive Matrix Multiplication Result: \n";
     for (int i = 0; i < size; i++) {
         for (int j = 0; j < size; j++) {
-            cout << ans[i][j] << " ";
+            cout << ans[i][j] << "\t";
         }
         cout << endl;
     }
@@ -75,7 +75,7 @@ int main() {
             for (int k = 0; k < size; k++) {
                 v += arr[i][k] * b[k][j];
             }
-            cout << v << " ";
+            cout << v << "\t";
         }
         cout << endl;
     }

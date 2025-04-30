@@ -326,8 +326,13 @@ o	If b[m][n] = "⬅", move left (skip current character of str2).
 Enter the two string
 babbab
 abaaba
+<<<<<<< Updated upstream
 0   0   0   0   0   0   0  
 0   0⬆  1↖  1⬅  1⬅  1↖  1⬅
+=======
+0   0   0   0   0   0   0   
+0   0⬆  1↖  1⬅  1⬅  1↖  1⬅ 
+>>>>>>> Stashed changes
 0   1↖  1⬆  2↖  2↖  2⬅  2↖
 0   1⬆  2↖  2⬆  2⬆  3↖  3⬅
 0   1⬆  2↖  2⬆  2⬆  3↖  3⬆

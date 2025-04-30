@@ -26,8 +26,4 @@ int main() {
     cout<<a<<"^"<<b<<" = "<<power(a,b)<<endl;
 
     return 0;
-
-    
-
-
 }
