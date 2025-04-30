@@ -322,10 +322,11 @@ o	If b[m][n] = "⬅", move left (skip current character of str2).
 5.	Print the Final LCS after backtracking.
 
 #### Output:
+```
 Enter the two string
 babbab
 abaaba
-0   0   0   0   0   0   0   
+0   0   0   0   0   0   0  
 0   0⬆  1↖  1⬅  1⬅  1↖  1⬅
 0   1↖  1⬆  2↖  2↖  2⬅  2↖
 0   1⬆  2↖  2⬆  2⬆  3↖  3⬅
@@ -333,7 +334,7 @@ abaaba
 0   1↖  2⬆  3↖  3↖  3⬆  4↖
 0   1⬆  2↖  3⬆  3⬆  4↖  4⬆
 Longest Common Substring - baba
-
+```
 #### Time Complexity: O(m*n) 
 ![alt text](Lab9/LCS/image.png)
 #### Space Complexity: O(m*n)
