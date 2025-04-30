@@ -301,5 +301,39 @@ Enter the value of n
 [2 4 1 3]
 [3 1 4 2]
 #### Time Complexity: O(N!) 
-![alt text](Lab9/image.png)
+![alt text](Lab9/Queen/queenimage.png)
 #### Space Complexity: O(N)
+
+
+### Problem 2.
+Given two strings, the task is to find the length of their Longest Common Subsequence (LCS), which is the longest sequence that appears in the same relative order (but not necessarily contiguous) in both strings.
+
+#### Algorithm: 
+1.	Initialize a 2D DP Table c[m+1][n+1] where m and n are the lengths of the two strings.
+2.	Fill the DP Table: If characters match, c[i][j] = 1 + c[i-1][j-1]. Otherwise, c[i][j] = max(c[i-1][j], c[i][j-1]).
+3.	Track the Directions using a table b[m+1][n+1] to store:
+o	"↖" for diagonal (match),
+o	"⬆" for up (skip from top),
+o	"⬅" for left (skip from left).
+4.	Backtrack from b[m][n] to print the LCS:
+o	If b[m][n] = "↖", include the character and move diagonally.
+o	If b[m][n] = "⬆", move up (skip current character of str1).
+o	If b[m][n] = "⬅", move left (skip current character of str2).
+5.	Print the Final LCS after backtracking.
+
+#### Output:
+Enter the two string
+babbab
+abaaba
+0   0   0   0   0   0   0   
+0   0⬆  1↖  1⬅  1⬅  1↖  1⬅
+0   1↖  1⬆  2↖  2↖  2⬅  2↖
+0   1⬆  2↖  2⬆  2⬆  3↖  3⬅
+0   1⬆  2↖  2⬆  2⬆  3↖  3⬆
+0   1↖  2⬆  3↖  3↖  3⬆  4↖
+0   1⬆  2↖  3⬆  3⬆  4↖  4⬆
+Longest Common Substring - baba
+
+#### Time Complexity: O(m*n) 
+![alt text](Lab9/LCS/image.png)
+#### Space Complexity: O(m*n)
