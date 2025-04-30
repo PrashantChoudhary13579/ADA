@@ -326,13 +326,10 @@ o	If b[m][n] = "⬅", move left (skip current character of str2).
 Enter the two string
 babbab
 abaaba
-<<<<<<< Updated upstream
 0   0   0   0   0   0   0  
 0   0⬆  1↖  1⬅  1⬅  1↖  1⬅
-=======
 0   0   0   0   0   0   0   
 0   0⬆  1↖  1⬅  1⬅  1↖  1⬅ 
->>>>>>> Stashed changes
 0   1↖  1⬆  2↖  2↖  2⬅  2↖
 0   1⬆  2↖  2⬆  2⬆  3↖  3⬅
 0   1⬆  2↖  2⬆  2⬆  3↖  3⬆
@@ -343,3 +340,44 @@ Longest Common Substring - baba
 #### Time Complexity: O(m*n) 
 ![alt text](Lab9/LCS/image.png)
 #### Space Complexity: O(m*n)
+
+
+
+         
+## LAB 10
+
+### Problem 1.
+(Graph Coloring) Given an undirected graph and a number m, determine all possible ways to assign colors to each vertex such that:
+•	No two adjacent vertices share the same color.
+•	At most m colors are used.
+
+
+#### Algorithm:
+1.	Use a recursive function solve() to try assigning colors to each node starting from the first.
+2.	For each node, attempt to assign a color from 1 to m.
+3.	Before assigning, check with isSafe() to ensure no adjacent node has the same color.
+4.	If safe, assign the color and recursively move to the next node.
+5.	If a coloring is completed (all nodes colored), store the solution.
+6.	Use backtracking to try different color combinations.
+7.	Print all valid colorings or report if none exist.
+
+
+#### Output:
+```
+All possible colorings:
+1 2 3 1
+1 2 3 3
+1 3 2 1
+1 3 2 2
+2 1 3 2
+2 1 3 3
+2 3 1 1
+2 3 1 2
+3 1 2 2
+3 1 2 3
+3 2 1 1
+3 2 1 3
+```
+#### Time Complexity: O(n * m^n)
+![alt text](Lab10/Graph-Coloring/graph_coloring_log_comparison.png)
+#### Space Complexity: O(n * m^n)
