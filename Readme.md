@@ -285,7 +285,7 @@ Space Complexity - O(V + E) // Array size of V + Edge list of E edges
 
 1. Given an integer n, the task is to find the solution to the n-queens problem, where n queens are placed on an n*n chessboard such that no two queens can attack each other.
 
-### Algorithm: 
+#### Algorithm: 
 1.	Start with column 1 and try placing a queen in each row of that column.
 2.	For each row, check if placing a queen there is safe (no other queen in the same row, main diagonal, or anti-diagonal).
 3.	If safe, place the queen and mark the row and diagonals as occupied.
@@ -294,10 +294,10 @@ Space Complexity - O(V + E) // Array size of V + Edge list of E edges
 6.	Backtrack: remove the queen and unmark the row and diagonals.
 7.	Repeat until all solutions are explored.
 
-### Output:
+#### Output:
 Enter the value of n 
 4
 [2 4 1 3]
 [3 1 4 2]
-### Time Complexity: O(N!) 
-### Space Complexity: O(N)
+#### Time Complexity: O(N!) 
+#### Space Complexity: O(N)
