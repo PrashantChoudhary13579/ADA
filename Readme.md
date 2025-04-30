@@ -300,4 +300,5 @@ Enter the value of n
 [2 4 1 3]
 [3 1 4 2]
 #### Time Complexity: O(N!) 
+![alt text](image.png)
 #### Space Complexity: O(N)
